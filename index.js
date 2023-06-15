@@ -60,12 +60,14 @@ document.getElementById("newButton").addEventListener("click", () =>{
     //cells are the array
     for(let i=0; i<cells.length; i++){
         const individualCell = cells[i];
-        if(!individualCell.style.backgroundColor){ //if it isnt colored in
+        if((!individualCell.style.backgroundColor) || individualCell.style.backgroundColor === "transparent" ){ //if it isnt colored in
             individualCell.style.backgroundColor=colorSelection(); //then color in
         }
         
     }
 })
+
+//
 //fill all cells with the currently selected color
 document.getElementById("fillAll").addEventListener("click" , () => {
     let cells = table.getElementsByTagName("TD")
@@ -74,6 +76,8 @@ document.getElementById("fillAll").addEventListener("click" , () => {
         individualCell.style.backgroundColor = colorSelection();
     }
 })
+
+//Issue #12 Solved
 //clear all cells/restore all cells to their original/initial color
 document.getElementById("clear").addEventListener("click", () => {
     let cells = table.getElementsByTagName("TD")
@@ -82,3 +86,32 @@ document.getElementById("clear").addEventListener("click", () => {
         individualCell.style.backgroundColor = "transparent"; //then color in
     }
 })
+
+// Issue #13 Solved
+//click and hold (mouseover) from a single cell (start) 
+//to a different cell (end) such that all affected/hovered-over 
+//cells from start to end change to the currently selected color
+
+let holding = false;
+table.addEventListener("mousedown", (event) => {
+  let cell = event.target;
+  if (cell.tagName === "TD") {
+    holding = true;
+    cell.style.backgroundColor = colorSelection();
+  }
+});
+
+table.addEventListener("mouseover", (event) => {
+  let cell = event.target;
+  if (holding && cell.tagName === "TD") {
+    cell.style.backgroundColor = colorSelection();
+  }
+});
+
+table.addEventListener("mouseup", () => {
+  holding = false;
+});
+
+document.addEventListener("mouseup", () => {
+  holding = false;
+});
