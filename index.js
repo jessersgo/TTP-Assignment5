@@ -47,8 +47,10 @@ function colorSelection(){
     let color = Colors.value.toLowerCase();
     return color;
 }
-{/* <option value="white">Colors</option>
-        <option value="red">Red</option>
-        <option value="purple">Purple</option>
-        <option value="lime">Green</option>
-        <option value="blue">Blue</option> */}
+table.addEventListener("click", (e) =>{
+    let clickCell = e.target;
+    if(clickCell.tagName === "TD"){
+        clickCell.style.backgroundColor= colorSelection();
+    }
+})
+
