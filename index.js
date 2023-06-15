@@ -66,3 +66,12 @@ document.getElementById("newButton").addEventListener("click", () =>{
         
     }
 })
+//fill all cells with the currently selected color
+document.getElementById("fillAll").addEventListener("click" , () => {
+    let cells = table.getElementsByTagName("TD")
+    for(let i=0; i<cells.length; i++){
+        const individualCell = cells[i];
+        individualCell.style.backgroundColor = colorSelection();
+        
+    }
+})
