@@ -44,6 +44,7 @@ table td {
 }
 
 button {
+    transition: all .5s ease;
     border-radius: 23px;
     margin-bottom: 60px;
     margin-left: 5px;
@@ -69,6 +70,7 @@ button:hover {
 }
 
 select {
+    transition: all .5s ease;
     height: 50px;
     width: 150px;
     align-items: center;
