@@ -1,6 +1,6 @@
 let table = document.getElementById("table")
 
-//Issue #9 Solved
+//Issue #2 Solved
 //add rows to the grid
 function addRow() {
     let columns = table.rows[0].cells.length;
@@ -12,7 +12,7 @@ function addRow() {
     }
 }
 
-//Issue #9 Solved
+//Issue #6 Solved
 //remove rows from the grid
 function removeRow() {
     let rows = table.rows.length
@@ -21,7 +21,7 @@ function removeRow() {
     }
 }
 
-//Issue #9 Solved
+//Issue #5 Solved
 //add columns to the grid
 function addColumn() {
     let rows = table.rows.length;
@@ -46,7 +46,7 @@ function removeColumn() {
     }
 }
 
-//Issue #9 Solved
+//Issue #8 Solved
 //select a color from a dropdown menu of colors
 function colorSelection() {
     const Colors = document.getElementById('colors')
