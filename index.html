@@ -1,42 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css" />
-    <script src ="index.js" defer></script>
-    <title>Document</title>
+    <script src="index.js" defer></script>
+    <title>Grid Mapper</title>
 </head>
 
 <body>
     <h1 class="title">Grid</h1>
 
-<div id ="buttons">
-    <button id ="Add" type="button" onclick = "addRow()">Add Row</button>
-    <button id="addColumn" type="button" onclick ="addColumn()">Add Column</button>
-    <button id="removeRow" type="button" onclick = "removeRow()">Remove Row</button>
-    <button id = "removeColumn" type="button" onclick="removeColumn()">Remove Column</button>
-    <select name= "colors" id="colors">
-        <option value="white">Colors</option>
-        <option value="red">Red</option>
-        <option value="purple">Purple</option>
-        <option value="lime">Green</option>
-        <option value="blue">Blue</option>
-    </select>
+    <div id="buttons">
+        <button id="Add" type="button" onclick="addRow()">Add Row</button>
+        <button id="addColumn" type="button" onclick="addColumn()">Add Column</button>
+        <button id="removeRow" type="button" onclick="removeRow()">Remove Row</button>
+        <button id="removeColumn" type="button" onclick="removeColumn()">Remove Column</button>
+        <select name="colors" id="colors">
+            <option value="transparent">Color Picker</option>
+            <option value="ghostwhite">White</option>
+            <option value="crimson">Red</option>
+            <option value="darkorchid">Purple</option>
+            <option value="seagreen">Green</option>
+            <option value="skyblue">Blue</option>
+            <option value="hotpink">Pink</option>
+            <option value="gold">Yellow</option>
+            <option value="black">Black</option>
+        </select>
 
-    <button id="newButton" type="button">Filled Uncolored Cells</button>
-    <button id = "fillAll" type="button">Fill All Columns</button>
-    <button id = "clear" type="button">Clear All</button>
-</div>
+        <button id="newButton" type="button">Fill Uncolored Cells</button>
+        <button id="fillAll" type="button">Fill All Cells</button>
+        <button id="clear" type="button">Clear All Cells</button>
+    </div>
 
-<table id ="table" >
-    <tr> 
-        <td>
-            
-        </td>
-    </tr>
-</table>
-    
+    <table id="table">
+        <tr>
+            <td>
+
+            </td>
+        </tr>
+    </table>
+
 </body>
+
 </html>
