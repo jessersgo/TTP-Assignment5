@@ -54,3 +54,15 @@ table.addEventListener("click", (e) =>{
     }
 })
 
+//changing the color of cells
+document.getElementById("newButton").addEventListener("click", () =>{
+    let cells = table.getElementsByTagName("TD")
+    //cells are the array
+    for(let i=0; i<cells.length; i++){
+        const individualCell = cells[i];
+        if(!individualCell.style.backgroundColor){ //if it isnt colored in
+            individualCell.style.backgroundColor=colorSelection(); //then color in
+        }
+        
+    }
+})
