@@ -63,6 +63,5 @@ document.getElementById("newButton").addEventListener("click", () =>{
         if(!individualCell.style.backgroundColor){ //if it isnt colored in
             individualCell.style.backgroundColor=colorSelection(); //then color in
         }
-        
     }
 })
