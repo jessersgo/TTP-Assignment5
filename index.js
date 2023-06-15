@@ -72,6 +72,13 @@ document.getElementById("fillAll").addEventListener("click" , () => {
     for(let i=0; i<cells.length; i++){
         const individualCell = cells[i];
         individualCell.style.backgroundColor = colorSelection();
-        
+    }
+})
+//clear all cells/restore all cells to their original/initial color
+document.getElementById("clear").addEventListener("click", () => {
+    let cells = table.getElementsByTagName("TD")
+    for(let i=0; i<cells.length; i++){
+        const individualCell = cells[i];
+        individualCell.style.backgroundColor = "transparent"; //then color in
     }
 })
